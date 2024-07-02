@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery-2</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script lang="java">
+        $(function(){
+            $(".box1 p").click(function(){
+                alert("box1 p를 클릭함"); //경고창 띄우기
+                console.log("box1 p를 클릭함");
+                // $().css({""});
+                $(this).hide(); 
+            }) /* box1 p*/
+
+            $(".box2 p").dblclick(function(){
+                $(this).hide();
+            }) //box2 p
+
+            $(".box3 p").mouseenter(function(){
+                $(this).css({"color" : "#D10363"});
+            }) //box3 p
+            
+            $(".box8 p").mouseover(function(){
+                $(this).css({"color" : "#D10363"});
+            }) //box8 p
+            
+            
+            $(".box4 p").mouseleave(function(){
+                $(this).css({"color" : "#D10363"});
+            }) //box4 p
+            
+            $(".box5 p").mousedown(function(){
+                $(this).css({"color" : "#D10363"});
+            }) //box5 p
+            
+            $(".box6 p").mouseup(function(){
+                $(this).css({"color" : "#D10363"});
+            }) //box6 p
+            
+            // mouseenter<->mouseout
+            // mouseover<->mouseleave
+
+
+            $(".box7 p").hover(function(){
+                $(this).css({"background" : "#1679AB"});
+            }, function(){
+                $(this).css({"background" : "#FFB1B1"});
+            }) //box7 p
+            
+
+            // //////여러개 이벤트를 넣을때는 .on을 쓴다.
+            
+            $(".box9 p").on({
+                mouseover : function(){
+                    $(this).css({"background" : "#F19ED2"}); //중괄호 있을때는 콜론(:)구분
+                },
+                mouseleave : function(){
+                    $(this).css("background" , "#E8C5E5"); //중괄호 없을때는 콤마(,)구분
+                },
+                click : function(){
+                    $(this).css({"background" : "#91DDCF"});
+                }
+            }) //box8 p
+
+            $(".box10 input").focus(function(){
+                $(this).css({"background" : "#FFDE95"})
+            }) //box10 input
+            
+            $(".box10 input").blur(function(){
+                $(this).css({"background" : "#EF9C66"})
+
+            })//box10 input
+
+
+
+
+
+
+
+
+
+
+        }) //j
+    </script>
+
+
+    <style type="text/css">
+        body{background: #D8EFD3;}
+        div{border: 1px solid gray; margin: 50px; 
+            font-size: 2rem; font-weight: 999; text-transform: capitalize;}
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+    <div class="box1">
+        <p>click me!</p>
+        <p>click me!</p>
+        <p>click me!</p>
+    </div>
+    
+    <div class="box2">
+        <p>double click me!</p>
+        <p>double click me!</p>
+        <p>double click me!</p>
+    </div>
+
+    <div class="box3">
+        <p>enter me!</p> <!-- 마우스가 올라가면 됨 -->
+    </div>
+
+    <div class="box4">
+        <p>leave a mouse!</p>
+    </div>
+
+    <div class="box5">
+        <p>mouse down!</p>
+    </div>
+
+    <div class="box6">
+        <p>mouse up!</p>
+    </div>
+
+    <div class="box7">
+        <p>hover</p>
+    </div>
+
+    <div class="box8">
+        <p>mouseover</p>
+    </div>
+
+    <div class="box9">
+        <p>multiple</p>
+    </div>
+
+    <div class="box10">
+        NAME: <input type="text"> <br>
+        MAIL : <input type="email"> <br>
+        PASSWORD : <input type="password"> <br>
+    </div>
+
+</body>
+</html>

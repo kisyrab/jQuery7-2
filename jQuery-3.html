@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery-3</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script lang="java">
+        $(function(){
+            $(".hide").click(function(){
+                $(".img_view").hide(1000);
+            }) //.hide
+
+            $(".show").click(function(){
+                $(".img_view").show(2000);
+            }) //.show
+            
+            $(".toggle").click(function(){
+                $(".img_view").toggle(1000);
+            }) //.toggle
+
+        }) //j
+    </script>
+
+
+</head>
+<body>
+    
+    <h1>Show & Hide & Toggle</h1>
+
+    <button class="hide">Hide</button>
+    <button class="show">Show</button>
+    <button class="toggle">Toggle</button>
+
+    <p class="img_view">
+        <img src="img/002.jpg" alt="car">
+    </p>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+            $(".bt1").click(function(){
+                $(".ufo").animate({"left" : "-=50px"}, 500)
+            })
+            $(".bt2").click(function(){
+                $(".ufo").animate({"left" : "+=50px"}, 500)
+            })
+            $(".bt3").click(function(){
+                $(".ufo").animate({"top" : "-=50px"}, 500)
+            })
+            $(".bt4").click(function(){
+                $(".ufo").animate({"top" : "+=50px"}, 500)
+            })
+        }) //j
+    </script>
+
+    <style type="text/css">
+        h1{font-size: 4rem;}
+        body{
+            text-align: center;
+            color: white; background: url("img/bg1.jpg") no-repeat center / cover;}
+        button{
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            color: white;
+            font-size: 20px;
+            border-radius: 50px;
+            background: deeppink;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .box{
+            width: 800px; height: 800px;
+            border: 10px dotted deeppink;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ufo{
+            position: absolute;
+            left: 0; top: 0;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>UFO Move Event!</h1>
+    
+    <button class="bt1">left</button>
+    <button class="bt2">right</button>
+    <button class="bt3">top</button>
+    <button class="bt4">bottom</button>
+    
+    <div class="box">
+        <div class="ufo">
+            <img src="img/ufo.png" alt="ufo">
+        </div> <!-- ufo -->
+    </div> <!-- box -->
+
+</body>
+</html>

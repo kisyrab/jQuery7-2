@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery-1</title>
+    
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script lang="java">
+        $(function(){
+            $("button").click(function(){
+                //$(".test").hide();
+                
+                // $(".test").css("color" , "red");
+                // $(".test").css("font-size" , "50px");
+                // 축약↓↓↓↓↓
+                // $(".test").css("color" , "red").css("font-size" , "50px");
+                // 축약↓↓↓↓↓
+                $(".test").css({"color" : "#B6C7AA" , "font-size" : "50px"});
+
+                $("#test").css({"background" : "#E8C5E5" , "font-size" : "3rem" , "color" : "gray"})
+
+            }) //button click
+        }) //j
+                
+    </script>
+
+
+    <style type="text/css">
+        h1.test{font-size: 3rem;}
+    </style>    
+
+</head>
+<body>
+    
+    <h1 class="test">Header - 1</h1>
+
+    <p class="test">This is paragraph</p>
+
+    <p id="test">This is another paragraph</p>
+
+    <button>Click Me!</button>
+
+
+
+
+</body>
+</html>

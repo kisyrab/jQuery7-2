@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery-4</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    
+    <script lang="java">
+        $(function(){
+            $(".btn1").click(function(){
+                $(".img_view").fadeIn();
+            }) //.btn1
+            $(".btn2").click(function(){
+                $(".img_view").fadeOut();
+            }) //.btn2
+            $(".btn3").click(function(){
+                $(".img_view").fadeToggle();
+            }) //.btn3
+            $(".btn4").click(function(){
+                $(".img_view").fadeTo(1000, 0.5); //속도, 투명도(0~1)
+            }) //.btn4
+
+
+        }) //j
+    </script>
+
+</head>
+<body>
+
+    <h1>Fade In Out Toggle Fade-to</h1>
+    <button class="btn1">fadeIn</button>
+    <button class="btn2">fadeOut</button>
+    <button class="btn3">fadeToggle</button>
+    <button class="btn4">fadeTo</button>
+
+    <p class="img_view">
+        <img src="img/001.jpg" alt="car">
+    </p>
+
+</body>
+</html>
